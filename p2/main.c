@@ -14,7 +14,7 @@ int main(void)
     getchar();
     
     for (i = 0; i < len; i++) {
-        scanf(" %c", &ch);
+        scanf("%c", &ch);
 
         if (ch >= 'a' && ch <= 'z') {
             count++;
