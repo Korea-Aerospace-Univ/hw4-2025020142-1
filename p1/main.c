@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main(void) 
+{
     int answer, guess, count = 0;
 
     printf("정답 입력 : ");
