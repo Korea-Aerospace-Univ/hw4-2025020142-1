@@ -1,40 +1,40 @@
 #include <stdio.h>
 
-int main() {
-    int n;
-    scanf("%d", &n);
+int main(void)
+{
+    char ch;
+    int i, count, number, len, max_num, max_str;
 
-    char str;
-    scanf("%s", str);
+    count = 0;
+    number = 0;
+    max_num = 0;
+    max_str = 0;
 
-    int lowerCnt = 0, digitCnt = 0;
-    int maxLower = 0, maxDigit = 0;
+    scanf("%d", &len);
 
-    for (int i = 0; i < n; i++) 
-    {
-        char ch = str[i];
-        if (ch >= 'a' && ch <= 'z') 
-	{
-            lowerCnt++;
-            digitCnt = 0;
-            if (lowerCnt > maxLower) 
-	    maxLower = lowerCnt;
-        } 
-	else if (ch >= '0' && ch <= '9') 
-	{
-            digitCnt++;
-            lowerCnt = 0;
-            if (digitCnt > maxDigit) 
-	    maxDigit = digitCnt;
-        } 
-	else 
-	{
-            lowerCnt = 0;
-            digitCnt = 0;
+    for (i = 0; i < len; i++) {
+        scanf(" %c", &ch);
+
+        if (ch >= 'a' && ch <= 'z') {
+            count++;
+            number = 0;
+            if (count > max_str)
+                max_str = count;
+        }
+        else if (ch >= '0' && ch <= '9') {
+            number++;
+            count = 0;
+            if (number > max_num)
+                max_num = number;
+        }
+        else {
+            count = 0;
+            number = 0;
         }
     }
 
-    printf("%d\n", maxLower);
-    printf("%d\n", maxDigit);
+    printf("%d\n", max_str);
+    printf("%d\n", max_num);
+
     return 0;
 }
