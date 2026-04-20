@@ -11,7 +11,8 @@ int main(void)
     max_str = 0;
 
     scanf("%d", &len);
-
+    getchar()
+    
     for (i = 0; i < len; i++) {
         scanf(" %c", &ch);
 
