@@ -8,7 +8,7 @@ int main(void)
 
     do {
         scanf("%d", &guess);
-        count++;
+        count+=1;
         if (guess > answer)
             printf("%d>?\n", guess);
         else if (guess < answer)
